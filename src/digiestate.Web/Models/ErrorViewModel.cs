@@ -1,6 +1,6 @@
 using System;
 
-namespace digiestate.Models
+namespace digiestate.Web.Models
 {
     public class ErrorViewModel
     {

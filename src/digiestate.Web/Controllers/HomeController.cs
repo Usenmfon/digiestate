@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using digiestate.Models;
+using digiestate.Web.Models;
 
-namespace digiestate.Controllers
+namespace digiestate.Web.Controllers
 {
     public class HomeController : Controller
     {
