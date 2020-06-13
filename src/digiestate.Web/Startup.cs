@@ -25,7 +25,7 @@ namespace digiestate
                 options => options.UseSqlServer(Configuration.GetConnectionString("AuthenticationConnection"),
                 
                 sqlServerOptions => {
-                    sqlServerOptions.MigrationsAssembly("digiestate");
+                    sqlServerOptions.MigrationsAssembly("digiestate.Data");
                 }
                 ));
 
