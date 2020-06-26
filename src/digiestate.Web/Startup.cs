@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using digiestate.Data.DatabaseContexts.ApplicationContext;
 using digiestate.Data.DatabaseContexts.AuthenticationDbContext;
 using digiestate.Data.Entities;
+using digiestate.Web.Interfaces;
+using digiestate.Web.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -53,6 +55,7 @@ namespace digiestate
                     options.SignIn.RequireConfirmedPhoneNumber = false;
                 });
             services.AddControllersWithViews();
+            services.AddTransient<IAccountsService, AccountsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
