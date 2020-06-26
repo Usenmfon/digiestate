@@ -19,7 +19,14 @@ namespace digiestate.Web.Controllers
             _accountsService = accountsService;
             _signInManager = signInManager;
         }
-        
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return LocalRedirect("~/");
+        }
+
         [HttpGet]
         public IActionResult Login()
         {
